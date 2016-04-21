@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        {% for time_entry in time_entries %}
+            Project # {{ time_entry.project['id'] }}/{{ time_entry.activity['id'] }}<br>
+        {% endfor %}
+{% endblock %}
+
