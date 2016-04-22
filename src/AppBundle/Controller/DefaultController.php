@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/projects", name="all_projects")
+     * @Route("/", name="all_projects")
      */
     public function projectsAction()
     {
