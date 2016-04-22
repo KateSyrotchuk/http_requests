@@ -1,0 +1,15 @@
+
+{{ form_start(form, { method: 'POST', action: path('new_comment', { 'project_id': project_id }) }) }}
+<fieldset>
+    <h4>Leave a Comment:</h4>
+
+    <form role="form" , method="post">
+        <div class="form">
+            <div class="form-group">
+                {% form_theme form 'bootstrap_3_layout.html.twig' %}
+                {{ form(form) }}
+            </div>
+        </div>
+    </form>
+</fieldset>
+{{ form_end(form) }}

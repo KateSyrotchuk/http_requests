@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <h1>Projects</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Subject</th>
+            <th>Created on</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if issues is not null %}
+            {% for issue in issues %}
+                <tr>
+                    <td>{{ issue.id }}</td>
+                    <td>{{ issue.subject }}</td>
+                    <td>{{ issue.created_on }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+{% endblock body %}

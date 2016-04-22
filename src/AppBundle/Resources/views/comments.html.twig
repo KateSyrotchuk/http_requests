@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <div class="well">
+        {{ render(controller('AppBundle:Default:commentNew', { 'project_id': project_id })) }}
+    </div>
+    <h3>List of Comments</h3>
+    {% for comment in comments %}
+        <div class="panel panel-default">
+            <div class="panel-body">{{ comment.content }}</div>
+        </div>
+    {% endfor %}
+{% endblock body %}
