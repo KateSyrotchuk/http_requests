@@ -16,7 +16,7 @@ parameters:
     mailer_password:   ~
 
     redmine_password:  ~
-    redmine_username:  ~
+    redmine_username:  test
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
