@@ -1,0 +1,39 @@
+{% extends '::base.html.twig'%}
+{% block body %}
+    <h1>Product {{ product.id }}</h1>
+    {% if app.session.flashBag.has('success') %}
+        <div class="alert alert-success">
+            {% for msg in app.session.flashBag.get('success') %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+
+    {% endif %}
+    <div class="well"><a href="{{ path('mongodb_create') }}" class="btn btn-default">
+            Create new </a>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Prise</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>
+                    <div>
+                        <a href="#" class="btn btn-default">
+                            Delete Product </a>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock body %}
